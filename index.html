@@ -1,10 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
+    <h1>BUAAERJYS的个人博客</h1>
 
+    <script>
+        // 页面加载后3秒更改标题
+        setTimeout(() => {
+            document.title = "BUAAERJYS的个人博客";
+        }, 3000);
+
+        // 当用户离开页面但未关闭时更改标题
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "有空常来哦~";
+            } else {
+                document.title = "BUAAERJYS的个人博客";
+            }
+        });
+    </script>
 </body>
 </html>
