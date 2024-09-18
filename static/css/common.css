@@ -97,12 +97,11 @@ body {
 }
 
 .title {
-    margin: 20px 0 0 30px;
+    margin: 20px 0 10px 30px;
     align-items: center;
     font-size: 26px;
     font-weight: 800;
     display: inline-flex;
-    position: fixed;
     transition: transform 0.4s ease;
 }
 
@@ -134,20 +133,21 @@ body {
 }
 
 .container {
-    display: flex;
+    margin-bottom: 20px;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
     padding: 0 25px;
     box-sizing: border-box;
     overflow: hidden;
+    overflow-y: auto;
 }
 
 .cards-wrapper {
-    padding: 35px;
+    padding: 10px;
     display: flex;
     max-width: 100%;
-    overflow-x: auto;
+    overflow-y: auto;
     scroll-snap-type: x mandatory;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -159,11 +159,10 @@ body {
 
 .card {
     flex: 0 0 auto;
-    width: 350px;
-    height: 600px;
+    width: 100%;
+    height: 200px;
     margin: 0 25px;
     display: flex;
-    flex-direction: column;
     background: var(--item_bg_color);
     backdrop-filter: blur(var(--card_filter));
     -webkit-backdrop-filter: blur(var(--card_filter));
@@ -178,6 +177,7 @@ body {
 }
 
 .card-image {
+    flex: 0 0 300px;
     height: 100%;
     overflow: hidden;
 }
@@ -191,7 +191,7 @@ body {
 .card-content {
     display: flex;
     flex-direction: column;
-    height: calc(100% - 150px);
+    flex-grow: 1;
     padding: 15px;
 }
 
@@ -224,6 +224,7 @@ body {
 }
 
 .introduction {
+    text-align: center;
     padding: 0 20px;
     font-family: 'Microsoft YaHei', sans-serif;
     font-size: 16px;
