@@ -1,0 +1,252 @@
+@font-face {
+    font-family: "a";
+    src: url(https://www.bootstrapmb.com);
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: "b";
+
+    src: url(https://buaaerjys.us.kg/static/fonts/Ubuntu-Regular.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "title";
+    /*英文字体*/
+    src: url(https://buaaerjys.us.kg/static/fonts/Pacifico-Regular.ttf);
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    transition: background-color 0.2s ease;
+}
+
+a:hover,
+a:link,
+a:visited,
+a:active,
+a:focus {
+    text-decoration: none;
+    outline: none;
+    border: none;
+    color: inherit;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+/* 设置滚动条样式 */
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main_text_color, #000000);
+    border-radius: 8px;
+    height: 20%;
+}
+
+html[data-theme="Dark"] {
+
+    --main_text_color: #fff;
+    --gradient: linear-gradient(120deg, rgb(133, 62, 255), #f76cc6 30%, rgb(255, 255, 255) 60%);
+    --purple_text_color: #747bff;
+    --text_bg_color: rgb(26, 4, 48);
+    --item_bg_color: rgb(19, 20, 24);
+    --item_hover_color: rgb(19, 23, 27);
+    --item_left_title_color: rgb(255, 255, 255);
+    --item_left_text_color: rgb(142, 142, 142);
+    --footer_text_color: #646464;
+    --left_tag_item: linear-gradient(50deg, #1f2327, #000000);
+    --card_filter: 0px;
+    --back_filter: 0px;
+    --back_filter_color: #000000;
+    --fill: #ffffff;
+}
+
+
+body {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    font-family: "b", "a", sans-serif;
+    background: var(--main_bg_color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    transition: color 0.1s ease;
+    color: var(--main_text_color);
+    overflow: hidden;
+}
+
+.filter {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: var(--back_filter_color);
+    backdrop-filter: blur(var(--back_filter));
+    -webkit-backdrop-filter: blur(var(--back_filter));
+    z-index: -99999999;
+}
+
+.title {
+    margin: 20px 0 0 30px;
+    align-items: center;
+    font-size: 26px;
+    font-weight: 800;
+    display: inline-flex;
+    position: fixed;
+    transition: transform 0.4s ease;
+}
+
+.title i, .title svg {
+    margin-right: 8px;
+    height: 26px;
+    width: 26px;
+    fill: var(--fill);
+}
+
+.title:hover {
+    transform: translateY(-5px);
+}
+
+.title-text {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.title:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 25px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.cards-wrapper {
+    padding: 35px;
+    display: flex;
+    max-width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.cards-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    flex: 0 0 auto;
+    width: 350px;
+    height: 600px;
+    margin: 0 25px;
+    display: flex;
+    flex-direction: column;
+    background: var(--item_bg_color);
+    backdrop-filter: blur(var(--card_filter));
+    -webkit-backdrop-filter: blur(var(--card_filter));
+    border-radius: 10px;
+    overflow: hidden;
+    scroll-snap-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.card-image {
+    height: 100%;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 150px);
+    padding: 15px;
+}
+
+.projectName {
+    text-align: center;
+    font-family: 'LiSu', cursive;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.role {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.role .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.introduction-wrapper {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.introduction {
+    padding: 0 20px;
+    font-family: 'Microsoft YaHei', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.link {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+    align-self: center;
+}
+
+.projectName:hover, .role:hover, .introduction:hover, .link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .container {
+        justify-content: flex-start;
+    }
+
+    .cards-wrapper {
+        justify-content: flex-start;
+    }
+}
