@@ -1,10 +1,96 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <title>文件夹监视器</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="https://buaaerjys.us.kg/static/img/favicon.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://buaaerjys.us.kg/static/css/detail.css">
+    <link rel="stylesheet" href="https://buaaerjys.us.kg/static/css/root.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="https://buaaerjys.us.kg/static/js/foldermonitor.js"></script>
 </head>
 <body>
-<h1>文件夹监视器</h1>
+<!--网页背景-->
+<div class="background-container">
+    <div class="filter"></div>
+</div>
+
+<div class="content-container">
+    <header>
+        <div class="title">
+            <svg x="1726594247980" class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" p-id="5428"
+                 width="256" height="256">
+                <path d="M439.850667 134.784a382.762667 382.762667 0 0 0-183.893334 91.008l14.293334 14.293333A348.416 348.416 0 0 0 351.018667 288c6.144-20.053333 13.098667-38.826667 20.821333-56.149333 16.170667-36.394667 35.968-67.114667 59.008-89.088 2.944-2.773333 5.930667-5.418667 8.96-7.936zM225.792 256a382.464 382.464 0 0 0-97.194667 234.666667h191.658667c1.365333-57.6 8.234667-112.213333 19.626667-161.152a392.149333 392.149333 0 0 1-97.28-56.874667 21.461333 21.461333 0 0 1-1.706667-1.536l-15.104-15.146667zM128.597333 533.333333A382.464 382.464 0 0 0 225.792 768l15.104-15.104a21.717333 21.717333 0 0 1 1.706667-1.536 392.234667 392.234667 0 0 1 97.28-56.874667 801.450667 801.450667 0 0 1-19.626667-161.152H128.597333zM256 798.208a382.762667 382.762667 0 0 0 183.850667 91.008 167.850667 167.850667 0 0 1-8.96-7.936c-23.082667-21.973333-42.88-52.693333-59.050667-89.088-7.68-17.28-14.677333-36.096-20.821333-56.149333-29.909333 12.8-57.130667 29.013333-80.768 47.872L256 798.208zM584.149333 889.216a382.805333 382.805333 0 0 0 183.893334-91.008l-14.293334-14.293333a348.373333 348.373333 0 0 0-80.768-47.872c-6.144 20.053333-13.098667 38.826667-20.821333 56.149333-16.170667 36.394667-35.968 67.114667-59.008 89.088a167.850667 167.850667 0 0 1-8.96 7.936zM798.208 768a382.464 382.464 0 0 0 97.194667-234.666667h-191.658667a801.578667 801.578667 0 0 1-19.626667 161.152 392.277333 392.277333 0 0 1 97.28 56.874667 21.632 21.632 0 0 1 1.706667 1.578667l15.104 15.104zM895.402667 490.666667A382.464 382.464 0 0 0 798.208 256l-15.104 15.104a21.376 21.376 0 0 1-1.706667 1.536 392.192 392.192 0 0 1-97.28 56.874667c11.392 48.938667 18.261333 103.552 19.626667 161.152h191.658667zM768 225.792l-14.250667 14.293333a348.416 348.416 0 0 1-80.768 47.872c-6.144-20.053333-13.098667-38.826667-20.821333-56.149333-16.170667-36.394667-35.968-67.114667-59.008-89.088a166.186667 166.186667 0 0 0-8.96-7.936A382.805333 382.805333 0 0 1 768 225.792zM661.077333 533.333333a762.154667 762.154667 0 0 1-17.493333 146.901334A461.781333 461.781333 0 0 0 512 661.333333c-46.122667 0-90.453333 6.656-131.626667 18.858667a762.026667 762.026667 0 0 1-17.450666-146.858667h298.154666zM410.794667 774.826667c-7.210667-16.213333-13.781333-34.090667-19.626667-53.333334A418.730667 418.730667 0 0 1 512 704c42.666667 0 83.328 6.229333 120.789333 17.493333-5.802667 19.242667-12.373333 37.12-19.626666 53.333334-14.677333 33.152-31.658667 58.624-49.450667 75.52-17.664 16.853333-35.072 24.32-51.712 24.32s-34.048-7.466667-51.712-24.32c-17.792-16.896-34.773333-42.368-49.493333-75.52zM380.373333 343.808a762.026667 762.026667 0 0 0-17.450666 146.858667h298.154666a762.026667 762.026667 0 0 0-17.493333-146.858667c-41.088 12.202667-85.461333 18.858667-131.584 18.858667s-90.453333-6.656-131.626667-18.858667zM632.789333 302.506667A418.773333 418.773333 0 0 1 512 320c-42.666667 0-83.328-6.229333-120.789333-17.493333 5.802667-19.242667 12.373333-37.12 19.626666-53.333334 14.677333-33.152 31.658667-58.624 49.450667-75.52 17.664-16.810667 35.072-24.32 51.712-24.32s34.048 7.509333 51.712 24.32c17.792 16.896 34.773333 42.368 49.493333 75.52 7.210667 16.213333 13.781333 34.090667 19.626667 53.333334z"
+                      fill="#ffffff" p-id="5429"></path>
+            </svg>
+            <span class="title-text">文件夹监视器</span>
+        </div>
+        <div class="tags">
+            <span class="tag">watchdog</span>
+            <span class="tag">PyQt5</span>
+            <span class="tag">文件夹行为</span>
+            <span class="tag">桌面端</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="project-info">
+            <h2>功能介绍</h2>
+            <p>
+                文件夹监视器是一个基于PyQt5开发的软件，使用watchdog实时监控指定文件夹中的变化。它能够检测文件的创建、修改、删除等操作，并提供及时的通知和日志记录。同时对了解QSS的用户提供修改外观功能，通过修改软件QSS个性化定制软件外观。</p>
+            <h2>开发难点</h2>
+            <ul>
+                <li>适配不同电脑分辨率</li>
+                <li>处理大量文件和频繁变化的场景</li>
+                <li>优化资源占用，减少系统负载</li>
+                <li>使用合适的正则表达式匹配相应的QSS</li>
+                <li>重写文件夹结构变化事件，提供更准确的监视功能</li>
+            </ul>
+        </section>
+
+        <section class="demo">
+            <div class="demo-nav">
+                <button class="demo-nav-item active" data-demo="folder-change">监测目录管理</button>
+                <button class="demo-nav-item" data-demo="folder-detection">文件检测</button>
+                <button class="demo-nav-item" data-demo="real-time-notification">实时通知</button>
+                <button class="demo-nav-item" data-demo="log-generation">日志生成</button>
+                <button class="demo-nav-item" data-demo="appearance-modify">外观修改</button>
+            </div>
+            <div class="demo-content">
+                <div class="video-container">
+                    <video id="demo-video" controls>
+                        <source src="https://buaaerjys.us.kg/static/video/folder-change.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="code-container">
+                    <pre><code class="language-python">
+def add_folder(self):
+    folder = QFileDialog.getExistingDirectory(self, "选择监视文件夹")
+    if folder and folder not in self.folder_list:
+        self.folder_list.append(folder)
+        self.folderList.addItem(folder)
+        self.start_observer(folder)
+        self.save_folders()
+        self.log_action(f"Added folder: {folder}")
+
+def remove_folder(self):
+    current_item = self.folderList.currentItem()
+    if current_item:
+        folder = current_item.text()
+        self.folder_list.remove(folder)
+        self.folderList.takeItem(self.folderList.row(current_item))
+        self.stop_observer(folder)
+        self.save_folders()
+        self.log_action(f"Removed folder: {folder}")
+                    </code></pre>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
 </body>
-</html> 
+</html>
