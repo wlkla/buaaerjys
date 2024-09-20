@@ -2,7 +2,6 @@
 <html lang="zh-CN">
 
 <head>
-
     <meta charset="utf-8">
     <title>BUAAERJYS</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--确保能在IE中被正确渲染-->
@@ -12,25 +11,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://buaaerjys.us.kg/static/css/style.css">
     <link rel="stylesheet" href="https://buaaerjys.us.kg/static/css/root.css">
+    <script src="script.js"></script>
     <script src="https://buaaerjys.us.kg/static/js/script.js"></script>
 </head>
 
 <body>
 
-<!--网页背景-->
 <div class="filter"></div>
 
-<!--主体部分-->
 <div class="main">
-    <!--左边栏-->
     <div class="leftPart">
-        <div class="logo"
-             style="background-image: url(https://buaaerjys.us.kg/static/img/logo.png);box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);">
-            <img style="position: absolute;top:-15%;left:-10%;width: 120%; aspect-ratio: 1/1;"
-                 src="https://buaaerjys.us.kg/static/img/headwear.png" alt="">
+        <div class="logo">
+            <img style="position: absolute;top:-15%;left:-10%;width: 120%; aspect-ratio: 1/1;" alt="" src="">
             <a class="iconItem" onclick=""
                style="position: absolute;top:75%;left:75%;width: 30px;height: 30px; border-radius: 50%; background: black;box-shadow: 2px 2px 20px rgba(255, 255, 255, 0.5);"
-               target="_blank" href="https://github.com/wlkla">
+               target="_blank">
                 <svg x="1704870335945" class="icon" viewBox="-50 -30 1024 1024" xmlns="http://www.w3.org/2000/svg"
                      p-id="2487">
                     <path fill="white"
@@ -59,405 +54,23 @@
                 北京航空航天大学
             </div>
         </div>
-        <div class="left-div left-tag">
-            <div class="left-tag-item">
-                大四
-            </div>
-            <div class="left-tag-item">
-                数学
-            </div>
-            <div class="left-tag-item">
-                计算机
-            </div>
-            <div class="left-tag-item">
-                Python
-            </div>
-            <div class="left-tag-item">
-                C++
-            </div>
-            <div class="left-tag-item">
-                Java
-            </div>
-            <div class="left-tag-item">
-                Qt/PyQt
-            </div>
-            <div class="left-tag-item">
-                深度学习
-            </div>
-            <div class="left-tag-item">
-                网页
-            </div>
-            <div class="left-tag-item">
-                桌面
-            </div>
-            <div class="left-tag-item">
-                移动端
-            </div>
-        </div>
+        <div class="left-div left-tag"></div>
         <div class="left-div left-time">
-            <ul id="line">
-                <li>
-                    <div class="focus"></div>
-                    <div>进入北航</div>
-                    <div>2021.9</div>
-                </li>
-                <li>
-                    <div class="focus"></div>
-                    <div>学习Ps、Pr等工具</div>
-                    <div>2021.10</div>
-                </li>
-                <li>
-                    <div class="focus"></div>
-                    <div>接触Python</div>
-                    <div>2022.2</div>
-                </li>
-                <li>
-                    <div class="focus"></div>
-                    <div>了解PyQt，编写了成绩管理系统</div>
-                    <div>2022.7</div>
-                </li>
-                <li>
-                    <div class="focus"></div>
-                    <div>随时开始编写软件</div>
-                    <div>2022.8</div>
-                </li>
-                <li>
-                    <div class="focus"></div>
-                    <div>接触C++</div>
-                    <div>2022.12</div>
-                </li>
-                <li>
-                    <div class="focus"></div>
-                    <div>短暂接触微信小程序开发，编写点餐demo</div>
-                    <div>2023.2</div>
-                </li>
-                <li>
-                    <div class="focus"></div>
-                    <div>学习网站开发</div>
-                    <div>2023.3</div>
-                </li>
-                <li>
-                    <div class="focus"></div>
-                    <div>开始科研，接触深度学习</div>
-                    <div>2023.5</div>
-                </li>
-                <li>
-                    <div class="focus"></div>
-                    <div>接触Java</div>
-                    <div>2023.6</div>
-                </li>
-                <li>
-                    <div class="focus"></div>
-                    <div>学习计算机相关知识</div>
-                    <div>2023.9</div>
-                </li>
-                <li>
-                    <div class="focus"></div>
-                    <div>学习MySQL使用，同时搭建了两个网站</div>
-                    <div>2024.3</div>
-                </li>
-            </ul>
+            <ul id="line"></ul>
         </div>
     </div>
 
-    <!--主体部分-->
     <div class="rightPart">
-
-        <!--介绍部分-->
-        <div class="welcome">
-            Hello, I'm <span class="gradientText">ys</span>
-        </div>
-        <div class="description">
-            👦 <span class="purpleText">Senior</span> student
-        </div>
+        <div class="welcome">Hello, I'm <span class="gradientText">ys</span></div>
+        <div class="description">👦 <span class="purpleText">Senior</span> student</div>
         <div class="description">
             📝 The <span class="purpleText textBackground">code</span> is very interesting,
             and the <span class="purpleText textBackground">software</span> is very fun.
         </div>
-
-        <!--贪吃蛇-->
         <div class="tanChiShe">
             <img id="tanChiShe" src="https://buaaerjys.us.kg/static/svg/snake-Light.svg" alt="">
         </div>
-
-        <!--科研-->
-        <div>
-            <div class="title">
-                <a href="https://buaaerjys.us.kg/pages/research.html" target="_blank" rel="noopener noreferrer">
-                    <svg x="1726716682690" class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"
-                         p-id="4378" width="256" height="256">
-                        <path d="M953.12 733.984c43.776 71.84 50.912 144 18.592 201.12S872.928 1024 784.672 1024H238.688c-88.256 0-154.688-31.584-187.168-88.896s-25.152-129.28 19.936-203.488L319.424 255.2V80.928h-118.4V0H823.648v80.8h-118.4v174.336zM142.304 771.2c-30.208 49.792-37.024 94.208-20.032 124.224s59.648 47.808 116.416 47.808h545.984c56.8 0 99.2-17.44 116.416-47.808s10.176-74.432-18.72-121.92l-101.088-195.2H242.72zM624.064 274.912V80.96h-223.456v194.016l-118.24 227.2h459.552z m91.392 641.472a67.36 67.36 0 1 1 67.68-67.36 67.52 67.52 0 0 1-67.68 67.328z m-152.32-151.584a67.36 67.36 0 1 1 67.68-67.36 67.52 67.52 0 0 1-67.68 67.36z"
-                              fill="#ffffff" p-id="4379"></path>
-                    </svg>
-                    <span class="title-text">Scientific research        ></span>
-                </a>
-            </div>
-            <div class="projectList">
-
-                <!--大创-->
-                <a class="projectItem a" target="_blank" href="https://buaaerjys.us.kg/pages/research/creative.html">
-                    <div class="projectItemLeft">
-                        <h1>大创</h1>
-                        <p>海量媒体数据的热点检测分析</p>
-                    </div>
-                    <div class="projectItemRight">
-                        <img src="https://buaaerjys.us.kg/static/img/research_creative.png" alt="">
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <!--安卓应用-->
-        <div>
-            <div class="title">
-                <a href="https://buaaerjys.us.kg/pages/android.html" target="_blank" rel="noopener noreferrer">
-                    <svg x="1726594135249" class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"
-                         p-id="4252" width="256" height="256">
-                        <path d="M714.666667 87.466667H311.466667c-46.933333 0-85.333333 38.4-85.333334 85.333333V851.2c0 46.933333 38.4 85.333333 85.333334 85.333333h403.2c46.933333 0 85.333333-38.4 85.333333-85.333333V172.8c0-46.933333-38.4-85.333333-85.333333-85.333333z m-445.866667 85.333333c0-23.466667 19.2-42.666667 42.666667-42.666667h403.2c23.466667 0 42.666667 19.2 42.666666 42.666667v34.133333H268.8V172.8z m445.866667 721.066667H311.466667c-23.466667 0-42.666667-19.2-42.666667-42.666667v-34.133333H405.333333c12.8 0 21.333333-8.533333 21.333334-21.333334s-8.533333-21.333333-21.333334-21.333333h-136.533333V249.6h488.533333v524.8H618.666667c-12.8 0-21.333333 8.533333-21.333334 21.333333s8.533333 21.333333 21.333334 21.333334h138.666666v34.133333c0 23.466667-19.2 42.666667-42.666666 42.666667z"
-                              fill="#ffffff" p-id="4253"></path>
-                        <path d="M512 795.733333m-32 0a32 32 0 1 0 64 0 32 32 0 1 0-64 0Z" fill="#ffffff"
-                              p-id="4254"></path>
-                    </svg>
-                    <span class="title-text">Android applications        ></span>
-                </a>
-            </div>
-            <div class="projectList">
-
-                <!--周期事件预测-->
-                <a class="projectItem a" target="_blank" href="https://buaaerjys.us.kg/pages/android/prediction.html">
-                    <div class="projectItemLeft">
-                        <h1>周期事件预测</h1>
-                        <p>对周期性事件进行记录，并预测下次事件发生时间</p>
-                    </div>
-                    <div class="projectItemRight">
-                        <img src="https://buaaerjys.us.kg/static/img/android_penguin.png" alt="">
-                    </div>
-                </a>
-
-                <!--宿舍电费查询-->
-                <a class="projectItem a" target="_blank" href="https://buaaerjys.us.kg/pages/android/electricity.html">
-                    <div class="projectItemLeft">
-                        <h1>电费查询</h1>
-                        <p>用于查询宿舍内空调、照明电量</p>
-                    </div>
-                    <div class="projectItemRight">
-                        <img src="https://buaaerjys.us.kg/static/img/android_badge.png" alt="">
-                    </div>
-                </a>
-
-                <!--视频处理-->
-                <a class="projectItem a" target="_blank" href="https://buaaerjys.us.kg/pages/android/videoprocess.html">
-                    <div class="projectItemLeft">
-                        <h1>视频处理</h1>
-                        <p>对视频进行拆分，获取需要的帧</p>
-                    </div>
-                    <div class="projectItemRight">
-                        <img src="https://buaaerjys.us.kg/static/img/android_clip.png" alt="">
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <!--网页开发-->
-        <div>
-            <div class="title">
-                <a href="https://buaaerjys.us.kg/pages/website.html" target="_blank" rel="noopener noreferrer">
-                    <svg x="1726594247980" class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"
-                         p-id="5428" width="256" height="256">
-                        <path d="M439.850667 134.784a382.762667 382.762667 0 0 0-183.893334 91.008l14.293334 14.293333A348.416 348.416 0 0 0 351.018667 288c6.144-20.053333 13.098667-38.826667 20.821333-56.149333 16.170667-36.394667 35.968-67.114667 59.008-89.088 2.944-2.773333 5.930667-5.418667 8.96-7.936zM225.792 256a382.464 382.464 0 0 0-97.194667 234.666667h191.658667c1.365333-57.6 8.234667-112.213333 19.626667-161.152a392.149333 392.149333 0 0 1-97.28-56.874667 21.461333 21.461333 0 0 1-1.706667-1.536l-15.104-15.146667zM128.597333 533.333333A382.464 382.464 0 0 0 225.792 768l15.104-15.104a21.717333 21.717333 0 0 1 1.706667-1.536 392.234667 392.234667 0 0 1 97.28-56.874667 801.450667 801.450667 0 0 1-19.626667-161.152H128.597333zM256 798.208a382.762667 382.762667 0 0 0 183.850667 91.008 167.850667 167.850667 0 0 1-8.96-7.936c-23.082667-21.973333-42.88-52.693333-59.050667-89.088-7.68-17.28-14.677333-36.096-20.821333-56.149333-29.909333 12.8-57.130667 29.013333-80.768 47.872L256 798.208zM584.149333 889.216a382.805333 382.805333 0 0 0 183.893334-91.008l-14.293334-14.293333a348.373333 348.373333 0 0 0-80.768-47.872c-6.144 20.053333-13.098667 38.826667-20.821333 56.149333-16.170667 36.394667-35.968 67.114667-59.008 89.088a167.850667 167.850667 0 0 1-8.96 7.936zM798.208 768a382.464 382.464 0 0 0 97.194667-234.666667h-191.658667a801.578667 801.578667 0 0 1-19.626667 161.152 392.277333 392.277333 0 0 1 97.28 56.874667 21.632 21.632 0 0 1 1.706667 1.578667l15.104 15.104zM895.402667 490.666667A382.464 382.464 0 0 0 798.208 256l-15.104 15.104a21.376 21.376 0 0 1-1.706667 1.536 392.192 392.192 0 0 1-97.28 56.874667c11.392 48.938667 18.261333 103.552 19.626667 161.152h191.658667zM768 225.792l-14.250667 14.293333a348.416 348.416 0 0 1-80.768 47.872c-6.144-20.053333-13.098667-38.826667-20.821333-56.149333-16.170667-36.394667-35.968-67.114667-59.008-89.088a166.186667 166.186667 0 0 0-8.96-7.936A382.805333 382.805333 0 0 1 768 225.792zM661.077333 533.333333a762.154667 762.154667 0 0 1-17.493333 146.901334A461.781333 461.781333 0 0 0 512 661.333333c-46.122667 0-90.453333 6.656-131.626667 18.858667a762.026667 762.026667 0 0 1-17.450666-146.858667h298.154666zM410.794667 774.826667c-7.210667-16.213333-13.781333-34.090667-19.626667-53.333334A418.730667 418.730667 0 0 1 512 704c42.666667 0 83.328 6.229333 120.789333 17.493333-5.802667 19.242667-12.373333 37.12-19.626666 53.333334-14.677333 33.152-31.658667 58.624-49.450667 75.52-17.664 16.853333-35.072 24.32-51.712 24.32s-34.048-7.466667-51.712-24.32c-17.792-16.896-34.773333-42.368-49.493333-75.52zM380.373333 343.808a762.026667 762.026667 0 0 0-17.450666 146.858667h298.154666a762.026667 762.026667 0 0 0-17.493333-146.858667c-41.088 12.202667-85.461333 18.858667-131.584 18.858667s-90.453333-6.656-131.626667-18.858667zM632.789333 302.506667A418.773333 418.773333 0 0 1 512 320c-42.666667 0-83.328-6.229333-120.789333-17.493333 5.802667-19.242667 12.373333-37.12 19.626666-53.333334 14.677333-33.152 31.658667-58.624 49.450667-75.52 17.664-16.810667 35.072-24.32 51.712-24.32s34.048 7.509333 51.712 24.32c17.792 16.896 34.773333 42.368 49.493333 75.52 7.210667 16.213333 13.781333 34.090667 19.626667 53.333334z"
-                              fill="#ffffff" p-id="5429"></path>
-                    </svg>
-                    <span class="title-text">Websites        ></span>
-                </a>
-            </div>
-            <div class="projectList">
-
-                <!--MySQL初学-->
-                <a class="projectItem a" target="_blank"
-                   href="https://buaaerjys.us.kg/pages/websites/basiclearning.html">
-                    <div class="projectItemLeft">
-                        <h1>MySQL初学</h1>
-                        <p>通过点餐练习MySQL基本功能</p>
-                    </div>
-                    <div class="projectItemRight">
-                        <img src="https://buaaerjys.us.kg/static/img/websites_order.png" alt="">
-                    </div>
-                </a>
-
-                <!--餐厅订餐系统-->
-                <a class="projectItem a" target="_blank" href="https://buaaerjys.us.kg/pages/websites/restaurant.html">
-                    <div class="projectItemLeft">
-                        <h1>MySQL进阶</h1>
-                        <p>设计一套完整的餐厅订餐系统</p>
-                    </div>
-                    <div class="projectItemRight">
-                        <img src="https://buaaerjys.us.kg/static/img/websites_restaurant.png" alt="">
-                    </div>
-                </a>
-
-                <!--基于Github文件管理接口实现的个人博客-->
-                <a class="projectItem a" target="_blank" href="https://buaaerjys.us.kg/pages/websites/markdown.html">
-                    <div class="projectItemLeft">
-                        <h1>Markdown管理</h1>
-                        <p>使用Github管理Markdown文件</p>
-                    </div>
-                    <div class="projectItemRight">
-                        <img src="https://buaaerjys.us.kg/static/img/websites_markdown.png" alt="">
-                    </div>
-                </a>
-
-                <!--基于Github issue功能实现的个人博客-->
-                <a class="projectItem a" target="_blank" href="https://buaaerjys.us.kg/pages/websites/blog.html">
-                    <div class="projectItemLeft">
-                        <h1>个人博客</h1>
-                        <p>基于Github实现的博客网站</p>
-                    </div>
-                    <div class="projectItemRight">
-                        <img src="https://buaaerjys.us.kg/static/img/websites_blog.png" alt="">
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <!--桌面应用开发-->
-        <div>
-            <div class="title">
-                <a href="https://buaaerjys.us.kg/pages/desktop.html" target="_blank" rel="noopener noreferrer">
-                    <svg x="1726594316293" class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"
-                         p-id="6488" width="256" height="256">
-                        <path d="M987.428571 86.857143H36.571429c-20.228571 0-36.571429 16.342857-36.571429 36.571428v566.857143c0 20.228571 16.342857 36.571429 36.571429 36.571429h434.285714v128H274.285714c-10.057143 0-18.285714 8.228571-18.285714 18.285714v54.857143c0 5.028571 4.114286 9.142857 9.142857 9.142857h493.714286c5.028571 0 9.142857-4.114286 9.142857-9.142857v-54.857143c0-10.057143-8.228571-18.285714-18.285714-18.285714H553.142857V726.857143h434.285714c20.228571 0 36.571429-16.342857 36.571429-36.571429V123.428571c0-20.228571-16.342857-36.571429-36.571429-36.571428z m-45.714285 557.714286H82.285714V169.142857h859.428572v475.428572z"
-                              p-id="6489" fill="#ffffff"></path>
-                    </svg>
-                    <span class="title-text">Desktop applications        ></span>
-                </a>
-            </div>
-            <div class="projectList">
-
-                <!--最优化-->
-                <a class="projectItem b" target="_blank" href="https://buaaerjys.us.kg/pages/desktop/optimum.html">
-                    <div class="projectItemLeft">
-                        <h1>优化算法学习</h1>
-                        <p>学过最优化吗，就是这里面的知识</p>
-                    </div>
-                    <div class="projectItemRight">
-                        <img src="https://buaaerjys.us.kg/static/img/desktop_optimum.png" alt="">
-                    </div>
-                </a>
-
-                <!--大创相关-->
-                <a class="projectItem b" target="_blank" href="https://buaaerjys.us.kg/pages/desktop/research.html">
-                    <div class="projectItemLeft">
-                        <h1>大创产出</h1>
-                        <p>事件抽取、文本向量化、文本聚类、热度计算</p>
-                    </div>
-                    <div class="projectItemRight">
-                        <img src="https://buaaerjys.us.kg/static/img/desktop_research.png" alt="">
-                    </div>
-                </a>
-
-                <!--成绩管理系统-->
-                <a class="projectItem b" target="_blank" href="https://buaaerjys.us.kg/pages/desktop/score.html">
-                    <div class="projectItemLeft">
-                        <h1>成绩管理系统</h1>
-                        <p>你不知道你的成绩？来我这里查吧</p>
-                    </div>
-                    <div class="projectItemRight">
-                        <img src="https://buaaerjys.us.kg/static/img/desktop_score.png" alt="">
-                    </div>
-                </a>
-
-                <!--电话自动接听-->
-                <a class="projectItem b" target="_blank" href="https://buaaerjys.us.kg/pages/desktop/wechatphone.html">
-                    <div class="projectItemLeft">
-                        <h1>电话自动接听</h1>
-                        <p>为了在家里不会使用智能设备的奶奶</p>
-                    </div>
-                    <div class="projectItemRight">
-                        <img src="https://buaaerjys.us.kg/static/img/desktop_wechatphone.png" alt="">
-                    </div>
-                </a>
-
-                <!--文件夹监视器-->
-                <a class="projectItem b" target="_blank"
-                   href="https://buaaerjys.us.kg/pages/desktop/foldermonitor.html">
-                    <div class="projectItemLeft">
-                        <h1>文件夹监视器</h1>
-                        <p>我喜欢watch，喜欢dog，也喜欢watchdog</p>
-                    </div>
-                    <div class="projectItemRight">
-                        <img src="https://buaaerjys.us.kg/static/img/desktop_foldermonitor.png" alt="">
-                    </div>
-                </a>
-
-                <!--肺实质分割-->
-                <a class="projectItem b" target="_blank" href="https://buaaerjys.us.kg/pages/desktop/lung.html">
-                    <div class="projectItemLeft">
-                        <h1>肺实质分割</h1>
-                        <p>献上心脏，哦不，是献上肺</p>
-                    </div>
-                    <div class="projectItemRight">
-                        <img src="https://buaaerjys.us.kg/static/img/desktop_lung.png" alt="">
-                    </div>
-                </a>
-
-                <!--图床管理-->
-                <a class="projectItem b" target="_blank" href="https://buaaerjys.us.kg/pages/desktop/imageupload.html">
-                    <div class="projectItemLeft">
-                        <h1>图片上传</h1>
-                        <p>你知道图床吗，来看看吗，我自己搭建的</p>
-                    </div>
-                    <div class="projectItemRight">
-                        <img src="https://buaaerjys.us.kg/static/img/desktop_imageupload.png" alt="">
-                    </div>
-                </a>
-
-                <!--图标提取-->
-                <a class="projectItem b" target="_blank" href="https://buaaerjys.us.kg/pages/desktop/iconextract.html">
-                    <div class="projectItemLeft">
-                        <h1>图标提取</h1>
-                        <p>好好看的图标，我该怎么提取出来呢</p>
-                    </div>
-                    <div class="projectItemRight">
-                        <img src="https://buaaerjys.us.kg/static/img/desktop_iconextract.png" alt="">
-                    </div>
-                </a>
-
-                <!--题目背诵-->
-                <a class="projectItem b" target="_blank" href="https://buaaerjys.us.kg/pages/desktop/recite.html">
-                    <div class="projectItemLeft">
-                        <h1>习题背诵</h1>
-                        <p>该怎么背考题呢，考虑一下这个软件？</p>
-                    </div>
-                    <div class="projectItemRight">
-                        <img src="https://buaaerjys.us.kg/static/img/desktop_recite.png" alt="">
-                    </div>
-                </a>
-
-                <!--sayings-->
-                <a class="projectItem b" target="_blank" href="https://buaaerjys.us.kg/pages/desktop/sayings.html">
-                    <div class="projectItemLeft">
-                        <h1>Sayings</h1>
-                        <p>不知道干什么？因为名字是我随意起的</p>
-                    </div>
-                    <div class="projectItemRight">
-                        <img src="https://buaaerjys.us.kg/static/img/desktop_sayings.png" alt="">
-                    </div>
-                </a>
-
-                <!--AI助手-->
-                <a class="projectItem b" target="_blank" href="https://buaaerjys.us.kg/pages/desktop/ai.html">
-                    <div class="projectItemLeft">
-                        <h1>AI助手</h1>
-                        <p>好多类似的软件了，但希望你还是多看我一眼</p>
-                    </div>
-                    <div class="projectItemRight">
-                        <img src="https://buaaerjys.us.kg/static/img/desktop_ai.png" alt="">
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <!--技能列表-->
+        <div id="content-container"></div>
         <div>
             <div class="title">
                 <svg x="1705257823317" class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"
