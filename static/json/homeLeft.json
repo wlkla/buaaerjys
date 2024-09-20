@@ -1,0 +1,70 @@
+{
+  "logo": {
+    "backgroundImage": "https://buaaerjys.us.kg/static/img/logo.png",
+    "headwear": "https://buaaerjys.us.kg/static/img/headwear.png",
+    "githubLink": "https://github.com/wlkla"
+  },
+  "tags": [
+    "大四",
+    "数学",
+    "计算机",
+    "Python",
+    "C++",
+    "Java",
+    "Qt/PyQt",
+    "深度学习",
+    "网页",
+    "桌面",
+    "移动端"
+  ],
+  "timeline": [
+    {
+      "event": "进入北航",
+      "date": "2021.9"
+    },
+    {
+      "event": "学习Ps、Pr等工具",
+      "date": "2021.10"
+    },
+    {
+      "event": "接触Python",
+      "date": "2022.2"
+    },
+    {
+      "event": "了解PyQt，编写了成绩管理系统",
+      "date": "2022.7"
+    },
+    {
+      "event": "随时开始编写软件",
+      "date": "2022.8"
+    },
+    {
+      "event": "接触C++",
+      "date": "2022.12"
+    },
+    {
+      "event": "短暂接触微信小程序开发，编写点餐demo",
+      "date": "2023.2"
+    },
+    {
+      "event": "学习网站开发",
+      "date": "2023.3"
+    },
+    {
+      "event": "开始科研，接触深度学习",
+      "date": "2023.5"
+    },
+    {
+      "event": "接触Java",
+      "date": "2023.6"
+    },
+    {
+      "event": "学习计算机相关知识",
+      "date": "2023.9"
+    },
+    {
+      "event": "学习MySQL使用，同时搭建了两个网站",
+      "date": "2024.3"
+    }
+  ]
+}
