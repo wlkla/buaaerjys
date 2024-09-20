@@ -1,0 +1,146 @@
+{
+  "sections": [
+    {
+      "title": "Scientific research   >",
+      "svg": "https://buaaerjys.us.kg/static/svg/research.svg",
+      "link": "https://buaaerjys.us.kg/pages/research.html",
+      "projects": [
+        {
+          "name": "大创",
+          "description": "海量媒体数据的热点检测分析",
+          "link": "https://buaaerjys.us.kg/pages/research/creative.html",
+          "image": "https://buaaerjys.us.kg/static/img/research_creative.png"
+        }
+      ]
+    },
+    {
+      "title": "Android applications   >",
+      "svg": "https://buaaerjys.us.kg/static/svg/android.svg",
+      "link": "https://buaaerjys.us.kg/pages/android.html",
+      "projects": [
+        {
+          "name": "周期事件预测",
+          "description": "对周期性事件进行记录，并预测下次事件发生时间",
+          "link": "https://buaaerjys.us.kg/pages/android/prediction.html",
+          "image": "https://buaaerjys.us.kg/static/img/android_penguin.png"
+        },
+        {
+          "name": "电费查询",
+          "description": "用于查询宿舍内空调、照明电量",
+          "link": "https://buaaerjys.us.kg/pages/android/electricity.html",
+          "image": "https://buaaerjys.us.kg/static/img/android_badge.png"
+        },
+        {
+          "name": "视频处理",
+          "description": "对视频进行拆分，获取需要的帧",
+          "link": "https://buaaerjys.us.kg/pages/android/videoprocess.html",
+          "image": "https://buaaerjys.us.kg/static/img/android_clip.png"
+        }
+      ]
+    },
+    {
+      "title": "Websites   >",
+      "svg": "https://buaaerjys.us.kg/static/svg/websites.svg",
+      "link": "https://buaaerjys.us.kg/pages/websites.html",
+      "projects": [
+        {
+          "name": "MySQL初学",
+          "description": "通过点餐练习MySQL基本功能",
+          "link": "https://buaaerjys.us.kg/pages/websites/basiclearning.html",
+          "image": "https://buaaerjys.us.kg/static/img/websites_order.png"
+        },
+        {
+          "name": "MySQL进阶",
+          "description": "设计一套完整的餐厅订餐系统",
+          "link": "https://buaaerjys.us.kg/pages/websites/restaurant.html",
+          "image": "https://buaaerjys.us.kg/static/img/websites_restaurant.png"
+        },
+        {
+          "name": "Markdown管理",
+          "description": "使用Github管理Markdown文件",
+          "link": "https://buaaerjys.us.kg/pages/websites/markdown.html",
+          "image": "https://buaaerjys.us.kg/static/img/websites_markdown.png"
+        },
+        {
+          "name": "个人博客",
+          "description": "基于Github实现的博客网站",
+          "link": "https://buaaerjys.us.kg/pages/websites/blog.html",
+          "image": "https://buaaerjys.us.kg/static/img/websites_blog.png"
+        }
+      ]
+    },
+    {
+      "title": "Desktop applications   >",
+      "svg": "https://buaaerjys.us.kg/static/svg/desktop.svg",
+      "link": "https://buaaerjys.us.kg/pages/desktop.html",
+      "projects": [
+        {
+          "name": "优化算法学习",
+          "description": "学过最优化吗，就是这里面的知识",
+          "link": "https://buaaerjys.us.kg/pages/desktop/optimum.html",
+          "image": "https://buaaerjys.us.kg/static/img/desktop_optimum.png"
+        },
+        {
+          "name": "大创产出",
+          "description": "事件抽取、文本向量化、文本聚类、热度计算",
+          "link": "https://buaaerjys.us.kg/pages/desktop/research.html",
+          "image": "https://buaaerjys.us.kg/static/img/desktop_research.png"
+        },
+        {
+          "name": "成绩管理系统",
+          "description": "不知道自己的成绩，来这里看看吧",
+          "link": "https://buaaerjys.us.kg/pages/desktop/score.html",
+          "image": "https://buaaerjys.us.kg/static/img/desktop_score.png"
+        },
+        {
+          "name": "电话自动接听",
+          "description": "为了帮助与时代脱节的老人",
+          "link": "https://buaaerjys.us.kg/pages/desktop/wechatphone.html",
+          "image": "https://buaaerjys.us.kg/static/img/desktop_wechatphone.png"
+        },
+        {
+          "name": "文件夹监视器",
+          "description": "我喜欢watch，喜欢dog，也喜欢watchdog",
+          "link": "https://buaaerjys.us.kg/pages/desktop/foldermonitor.html",
+          "image": "https://buaaerjys.us.kg/static/img/desktop_foldermonitor.png"
+        },
+        {
+          "name": "肺实质分割",
+          "description": "献上我的心脏，哦，不对，是肺",
+          "link": "https://buaaerjys.us.kg/pages/desktop/lung.html",
+          "image": "https://buaaerjys.us.kg/static/img/desktop_lung.png"
+        },
+        {
+          "name": "图片上传",
+          "description": "你知道图床吗，来看看吧，我自己搭建的",
+          "link": "https://buaaerjys.us.kg/pages/desktop/imageupload.html",
+          "image": "https://buaaerjys.us.kg/static/img/desktop_imageupload.png"
+        },
+        {
+          "name": "图标提取",
+          "description": "很好看的图标，该怎么从exe中提取出来呢",
+          "link": "https://buaaerjys.us.kg/pages/desktop/iconextract.html",
+          "image": "https://buaaerjys.us.kg/static/img/desktop_iconextract.png"
+        },
+        {
+          "name": "习题背诵",
+          "description": "期末考试前背书时灵光一现写出来的",
+          "link": "https://buaaerjys.us.kg/pages/desktop/recite.html",
+          "image": "https://buaaerjys.us.kg/static/img/desktop_recite.png"
+        },
+        {
+          "name": "Sayings",
+          "description": "不知道干什么的？因为名字是我随意起的",
+          "link": "https://buaaerjys.us.kg/pages/desktop/sayings.html",
+          "image": "https://buaaerjys.us.kg/static/img/desktop_sayings.png"
+        },
+        {
+          "name": "AI助手",
+          "description": "好多类似的软件了，但至少是我努力的成果",
+          "link": "https://buaaerjys.us.kg/pages/desktop/ai.html",
+          "image": "https://buaaerjys.us.kg/static/img/desktop_ai.png"
+        }
+      ]
+    }
+  ]
+}
