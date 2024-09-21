@@ -1,10 +1,225 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <title>sayings</title>
+    <meta charset="utf-8">
+    <title>Sayings</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="https://buaaerjys.us.kg/static/img/favicon.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://buaaerjys.us.kg/static/css/detail.css">
+    <link rel="stylesheet" href="https://buaaerjys.us.kg/static/css/root.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="https://buaaerjys.us.kg/static/js/sayings.js"></script>
 </head>
 <body>
-<h1>sayings</h1>
+<!--网页背景-->
+<div class="background-container">
+    <div class="filter"></div>
+</div>
+
+<div class="content-container">
+    <header>
+        <div class="title">
+            <svg x="1726594316293" class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" p-id="6488"
+                 width="256" height="256">
+                <path d="M987.428571 86.857143H36.571429c-20.228571 0-36.571429 16.342857-36.571429 36.571428v566.857143c0 20.228571 16.342857 36.571429 36.571429 36.571429h434.285714v128H274.285714c-10.057143 0-18.285714 8.228571-18.285714 18.285714v54.857143c0 5.028571 4.114286 9.142857 9.142857 9.142857h493.714286c5.028571 0 9.142857-4.114286 9.142857-9.142857v-54.857143c0-10.057143-8.228571-18.285714-18.285714-18.285714H553.142857V726.857143h434.285714c20.228571 0 36.571429-16.342857 36.571429-36.571429V123.428571c0-20.228571-16.342857-36.571429-36.571429-36.571428z m-45.714285 557.714286H82.285714V169.142857h859.428572v475.428572z"
+                      p-id="6489" fill="#ffffff"></path>
+            </svg>
+            <span class="title-text">Sayings</span>
+        </div>
+        <div class="tags">
+            <span class="tag">QFluentWidgets</span>
+            <span class="tag">PyQt5</span>
+            <span class="tag">图片</span>
+            <span class="tag">视频</span>
+            <span class="tag">音频</span>
+            <span class="tag">聊天记录</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="project-info">
+            <h2>功能介绍</h2>
+            <p>
+                Sayings是我在了解到QFluentWidgets之后尝试编写的一个软件。QFluentWidgets是一个基于PyQt5的一个第三方组件库，提供了很多好看的组件，基于此编写的Sayings能实现如下功能：图片管理、音频管理、视频管理、聊天记录管理、素材收藏等。且该软件完全支持自定义，可以修改的内容包括：软件名称、软件图标、文件保存路径、启动界面设置、卡片设置、瀑布流调整等。该软件涉及多页面调用、信号传递、动画设置、剪切板读取等，功能丰富。</p>
+            <h2>开发难点</h2>
+            <ul>
+                <li>QFluentWidgets的学习使用</li>
+                <li>多页面调用</li>
+                <li>页面之间信号传递</li>
+                <li>各属性的保存与修改</li>
+                <li>瀑布流的实现</li>
+                <li>微信聊天记录的保存方式</li>
+            </ul>
+        </section>
+
+        <section class="demo">
+            <div class="demo-nav">
+                <button class="demo-nav-item active" data-demo="start-page">启动页面</button>
+                <button class="demo-nav-item" data-demo="image-management">图片管理</button>
+                <button class="demo-nav-item" data-demo="chat-management">聊天记录管理</button>
+                <button class="demo-nav-item" data-demo="audio-management">音频管理</button>
+                <button class="demo-nav-item" data-demo="video-management">视频管理</button>
+                <button class="demo-nav-item" data-demo="material-collection">素材收藏</button>
+                <button class="demo-nav-item" data-demo="software-customization">软件自定义</button>
+            </div>
+            <div class="demo-content">
+                <div class="video-container">
+                    <video id="demo-video" controls>
+                        <source src="https://buaaerjys.us.kg/static/video/start-page.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="code-container">
+                    <pre><code class="language-python">
+class SplashScreen(QWidget):
+    def __init__(self, icon: Union[str, QIcon, FluentIconBase], app_name, record_text, parent=None, enableShadow=True):
+        super().__init__(parent=parent)
+        self.resize(1100, 750)
+        self.setMouseTracking(True)
+        self.points = []
+        self.target = Target(self.width() / 2, self.height() / 2)
+        self.initPoints()
+        self._icon = icon
+        self._iconSize = QSize(96, 96)
+
+        self.titleBar = TitleBar(self)
+        self.iconWidget = IconWidget(icon, self)
+        self.shadowEffect = QGraphicsDropShadowEffect(self)
+
+        self.iconWidget.setFixedSize(self._iconSize)
+        self.shadowEffect.setColor(QColor(0, 0, 0, 50))
+        self.shadowEffect.setBlurRadius(15)
+        self.shadowEffect.setOffset(0, 4)
+
+        self.softwareNameLabel = QLabel(app_name, self)
+        self.softwareNameLabel.setGeometry(QRect(0, 160, 1100, 100))
+        self.softwareNameLabel.setStyleSheet('font: 30pt "隶书";')
+        self.softwareNameLabel.setAlignment(Qt.AlignCenter)
+
+        self.recordLabel = QLabel(record_text, self)
+        self.recordLabel.setGeometry(QRect(0, 500, 1100, 100))
+        self.recordLabel.setStyleSheet('font: 14pt "隶书";')
+        self.recordLabel.setAlignment(Qt.AlignCenter)
+
+        FluentStyleSheet.FLUENT_WINDOW.apply(self.titleBar)
+
+        if enableShadow:
+            self.iconWidget.setGraphicsEffect(self.shadowEffect)
+
+        if parent:
+            parent.installEventFilter(self)
+
+    def update(self, *args):
+        super(SplashScreen, self).update()
+
+    def setIcon(self, icon: Union[str, QIcon, FluentIconBase]):
+        self._icon = icon
+        self.update()
+
+    def icon(self):
+        return toQIcon(self._icon)
+
+    def setIconSize(self, size: QSize):
+        self._iconSize = size
+        self.iconWidget.setFixedSize(size)
+        self.update()
+
+    def iconSize(self):
+        return self._iconSize
+
+    def setTitleBar(self, titleBar: QWidget):
+        self.titleBar.deleteLater()
+        self.titleBar = titleBar
+        titleBar.setParent(self)
+        titleBar.raise_()
+        self.titleBar.resize(self.width(), self.titleBar.height())
+
+    def eventFilter(self, obj, e: QEvent):
+        if obj is self.parent():
+            if e.type() == QEvent.Resize:
+                self.resize(e.size())
+            elif e.type() == QEvent.ChildAdded:
+                self.raise_()
+
+        return super().eventFilter(obj, e)
+
+    def resizeEvent(self, e):
+        iw, ih = self.iconSize().width(), self.iconSize().height()
+        self.iconWidget.move(self.width() // 2 - iw // 2, self.height() // 2 - ih // 2)
+        self.titleBar.resize(self.width(), self.titleBar.height())
+
+    def finish(self):
+        self.close()
+
+    def paintEvent(self, e):
+        super(SplashScreen, self).paintEvent(e)
+        painter = QPainter()
+        painter.begin(self)
+        painter.setRenderHint(QPainter.Antialiasing)
+        painter.fillRect(self.rect(), Qt.white)
+        self.animate(painter)
+        painter.end()
+
+    def mouseMoveEvent(self, event):
+        super(SplashScreen, self).mouseMoveEvent(event)
+        self.target.x = event.x()
+        self.target.y = event.y()
+        self.update()
+
+    def initPoints(self):
+        self.points.clear()
+        stepX = self.width() / 20
+        stepY = self.height() / 20
+        for x in range(0, self.width(), int(stepX)):
+            for y in range(0, self.height(), int(stepY)):
+                ox = x + random() * stepX
+                oy = y + random() * stepY
+                point = Point(ox, ox, oy, oy)
+                point.valueChanged.connect(self.update)  # type: ignore
+                self.points.append(point)
+        findClose(self.points)
+
+    def animate(self, painter):
+        for p in self.points:
+            value = abs(getDistance(self.target, p))
+            if value < 4000:
+                p.lineColor.setAlphaF(0.3)
+                p.circleColor.setAlphaF(0.6)
+            elif value < 20000:
+                p.lineColor.setAlphaF(0.1)
+                p.circleColor.setAlphaF(0.3)
+            elif value < 40000:
+                p.lineColor.setAlphaF(0.02)
+                p.circleColor.setAlphaF(0.1)
+            else:
+                p.lineColor.setAlphaF(0)
+                p.circleColor.setAlphaF(0)
+
+            if p.lineColor.alpha():
+                for pc in p.closest:
+                    if not pc:
+                        continue
+                    path = QPainterPath()
+                    path.moveTo(p.x, p.y)
+                    path.lineTo(pc.x, pc.y)
+                    painter.save()
+                    painter.setPen(p.lineColor)
+                    painter.drawPath(path)
+                    painter.restore()
+            painter.save()
+            painter.setPen(Qt.NoPen)
+            painter.setBrush(p.circleColor)
+            painter.drawRoundedRect(QRectF(
+                p.x - p.radius, p.y - p.radius, 2 * p.radius, 2 * p.radius), p.radius, p.radius)
+            painter.restore()
+            p.initAnimation()
+                    </code></pre>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
 </body>
-</html> 
+</html>
